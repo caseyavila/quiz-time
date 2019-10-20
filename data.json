@@ -1,0 +1,60 @@
+{
+  "sets": {
+    "Math": [
+      [
+        "What is 10+10",
+        "20"
+      ],
+      [
+        "What is 20+10",
+        "30"
+      ],
+      [
+        "What is 20+20",
+        "40"
+      ]
+    ],
+    "English": [
+      [
+        "Person place or thing?",
+        "Noun"
+      ],
+      [
+        "Action?",
+        "Verb"
+      ],
+      [
+        "Modifies a Noun",
+        "Adjective"
+      ]
+    ],
+    "History": [
+      [
+        "A",
+        "1"
+      ],
+      [
+        "B",
+        "2"
+      ],
+      [
+        "C",
+        "3"
+      ]
+    ],
+    "Pets": [
+      [
+        "Dog",
+        "D"
+      ],
+      [
+        "Cat",
+        "C"
+      ],
+      [
+        "Anshul",
+        "A"
+      ]
+    ]
+  }
+}
