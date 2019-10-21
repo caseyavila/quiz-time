@@ -59,7 +59,6 @@ def studySet():
     global totalTerms
     global termList
     global correctCount
-    WebBlock(['youtube.com', 'reddit.com'])
     answer.delete(0, 'end')
     correctCount = 0
     termList = setData["sets"][currentSet.get()]
@@ -75,8 +74,6 @@ def submit():
         frmSets.create_text(175, 300, text="Correct!")
         correctCount += 1
     else:
-        if answer.get() == 43:
-            TimedUnBlock(['youtube.com', 'reddit.com'])
         frmSets.delete('all')
         frmSets.create_text(175, 300, text="Incorrect!")
     totalTerms = totalTerms - 1
