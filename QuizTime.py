@@ -1,5 +1,4 @@
 from tkinter import *
-import tkinter.ttk as ttk
 import json
 import random
 
@@ -84,6 +83,12 @@ def submit():
     else:
         canvPrint(termList[totalTerms][0])
         
+def enterCommand(event):
+    global totalTerms
+    if totalTerms == -1:  # Disable Enter button after set complete
+        pass
+    else:
+        submit()
 
 def addset():
     pass
@@ -114,6 +119,7 @@ opmSets = OptionMenu(root, currentSet, *setList)
 opmSets.config(activebackground='#DDDDDD')
 studyBtn = Button(root, text="Study Set", height=3, width=20, command=studySet)
 answer = Entry(frmSets, width=40)
+answer.bind('<Return>', enterCommand)
 answerBtn = Button(root, text="Submit", command=submit)
 addsetBtn = Button(root, text="Add Set", command=addset)
 
