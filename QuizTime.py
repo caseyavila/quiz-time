@@ -64,10 +64,10 @@ def studySet():
     termList = setData["sets"][currentSet.get()]
     totalTerms = len(termList) - 1
     canvPrint(termList[totalTerms][0])
-    
-def submit():
-    global totalTerms
+
+def printCorrect():
     global correctCount
+    global totalTerms
     if answer.get() == termList[totalTerms][1]:
         frmSets.delete('all')
         frmSets.create_text(175, 300, text="Correct!")
@@ -75,10 +75,16 @@ def submit():
     else:
         frmSets.delete('all')
         frmSets.create_text(175, 300, text="Incorrect!")
+    
+def submit():
+    global totalTerms
+    global correctCount
+    printCorrect()
     totalTerms = totalTerms - 1
     answer.delete(0, 'end')
     if totalTerms == -1:
         frmSets.delete('all')
+        printCorrect()
         frmSets.create_text(175, 175, text="Done with set! {} minutes earned!".format(correctCount))
     else:
         canvPrint(termList[totalTerms][0])
