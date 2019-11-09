@@ -81,12 +81,10 @@ def submit():
     global correctCount
     printCorrect()
     totalTerms = totalTerms - 1
-    answer.delete(0, 'end')
     if totalTerms == -1:
-        frmSets.delete('all')
-        printCorrect()
         frmSets.create_text(175, 175, text="Done with set! {} minutes earned!".format(correctCount))
     else:
+        answer.delete(0, 'end')
         canvPrint(termList[totalTerms][0])
         
 def enterCommand(event):
